@@ -68,6 +68,7 @@
           nixpkgs.hostPlatform = system;
           system.primaryUser = username;
           system.stateVersion = 5;
+          nix.enable = false;
         }
       ];
     };
