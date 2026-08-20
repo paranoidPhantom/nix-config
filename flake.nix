@@ -8,6 +8,10 @@
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    mac-app-util = {
+      url = "github:hraban/mac-app-util";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -29,7 +33,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, mac-app-util, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs:
   let
     hostname = "Andreis-MacBook-Pro";   # replace: `scutil --get LocalHostName`
     username = "hdla";        # replace: your macOS short username
@@ -61,6 +65,13 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { inherit username; };
+
+          users.users.${username} = {
+            name = username;
+            home = "/Users/${username}";
+          };
+
           home-manager.users.${username} = import ./home/home.nix;
         }
 
