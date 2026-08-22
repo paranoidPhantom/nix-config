@@ -41,9 +41,13 @@
       recursive = true; # Keeps directory structure intact
     };
   };
+
+  # SSH
+  # TODO: refactor to home-manager
   home.file = {
-    ".tmux.conf" = {
-      source = ../.tmux.conf;
+    ".ssh" = {
+      source = ../ssh;
+      recursive = true; # Keeps directory structure intact
     };
   };
 }
