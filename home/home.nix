@@ -17,6 +17,12 @@
     };
   };
 
+  # zoxide
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
 
   # zsh-autocomplete
   xdg.configFile."zsh/oh-my-zsh-custom" = {
