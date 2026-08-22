@@ -20,10 +20,13 @@
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
+  # Neovim
   xdg.configFile."nvim" = {
     source = ../nvim;
     recursive = true; # Keeps directory structure intact
   };
+
+  # tmux
   xdg.configFile."tmux/plugins/catppuccin/tmux" = {
     source = builtins.fetchGit {
       url = "https://github.com/catppuccin/tmux.git";
