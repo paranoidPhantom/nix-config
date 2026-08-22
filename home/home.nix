@@ -6,15 +6,7 @@
   home.stateVersion = "26.05"; 
 
   # Packages to install in your user environment
-  home.packages = with pkgs; [
-    git
-    ripgrep
-    (pkgs.neovim.override {
-      version = "0.11.0";
-    })
-    gh
-    tmux
-  ];
+  home.packages = (import ../software.nix { pkgs = pkgs; }).packages;
 
   # Configuration managed directly by Home Manager
   programs.git = {
