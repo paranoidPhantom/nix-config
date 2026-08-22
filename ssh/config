@@ -1,2 +1,2 @@
 Host *
-	IdentityAgent /Users/hdla/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+	IdentityAgent ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
