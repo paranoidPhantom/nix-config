@@ -17,6 +17,20 @@
     };
   };
 
+
+  # zsh-autocomplete
+  xdg.configFile."zsh/oh-my-zsh-custom" = {
+    source = pkgs.fetchFromGitHub {
+      owner = "marlonrichert";
+      repo = "zsh-autocomplete";
+      rev = "027cdab14451e98c9d36d72b1f79d9488ac88e46";
+      hash = "sha256-1GaGIOPZ/+DrwHodFB9ZgSy5RcJWIcjYj5edYMUWOuA="; # build and get the hash from the error
+      postFetch = ''
+        rm $out/run-tests.zsh
+      '';
+    };
+  };
+
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
