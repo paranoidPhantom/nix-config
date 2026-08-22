@@ -31,6 +31,39 @@
     };
   };
 
+  # zsh
+  programs.zsh = {
+    enable = true;
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+    shellAliases = {
+      cd = "z";
+      c = "clear";
+      ls = "ls -lAFGt | less";
+      ga = "git add $1";
+      gc = "git commit --edit";
+      gch = "git checkout";
+      gp = "git push";
+      gs = "git status";
+      nx = "nix develop";
+    };
+    autosuggestion = {
+      enable = true;
+    };
+    initContent = ''
+      clear
+
+      # Launch editor for command
+      autoload -Uz edit-command-line
+      zle -N edit-command-line
+      bindkey '^x^e' edit-command-line
+
+      # Fetch
+      [[ -n ''${TMUX:-} ]] || fastfetch --logo NixOS;
+    '';
+  };
+
 
   # zsh-autocomplete
   xdg.configFile."zsh/oh-my-zsh-custom" = {
