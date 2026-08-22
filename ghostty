@@ -1,0 +1,4 @@
+theme=Catppuccin Mocha
+quick-terminal-position = bottom
+background-opacity = 0.8
+background-blur=macos-glass-regular
