@@ -42,6 +42,12 @@
     };
   };
 
+  # Ghostty
+  # TODO: refactor to home-manager
+  xdg.configFile."ghostty/config" = {
+    source = ../ghostty;
+  };
+
   # SSH
   # TODO: refactor to home-manager
   home.file = {
