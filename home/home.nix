@@ -23,6 +23,14 @@
     enableZshIntegration = true;
   };
 
+  # desktoppr
+  programs.desktoppr = {
+    enable = true;
+    settings = {
+      picture = "https://media.512pixels.net/downloads/macos-wallpapers-6k/26-Tahoe-Beach-Night.png";
+    };
+  };
+
 
   # zsh-autocomplete
   xdg.configFile."zsh/oh-my-zsh-custom" = {
