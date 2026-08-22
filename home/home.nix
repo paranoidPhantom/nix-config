@@ -64,6 +64,51 @@
     '';
   };
 
+  # Lazygit
+  programs.lazygit = {
+    enable = true;
+    settings = {
+      gui = {
+        theme = {
+          activeBorderColor = [
+            "#b4befe"
+            "bold"
+          ];
+          inactiveBorderColor = [
+            "#a6adc8"
+          ];
+          optionsTextColor = [
+            "#b4befe"
+          ];
+          selectedLineBgColor = [
+            "#313244"
+          ];
+          cherryPickedCommitBgColor = [
+            "#45475a"
+          ];
+          cherryPickedCommitFgColor = [
+            "#b4befe"
+          ];
+          unstagedChangesColor = [
+            "#f38ba8"
+          ];
+          defaultFgColor = [
+            "#cdd6f4"
+          ];
+          searchingActiveBorderColor = [
+            "#f9e2af"
+          ];
+          lightTheme = false;
+        };
+
+        authorColors = {
+          "*" = "#b4befe";
+        };
+      };
+    };
+  };
+
+  # omz
 
   # zsh-autocomplete
   xdg.configFile."zsh/oh-my-zsh-custom" = {
