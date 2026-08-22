@@ -5,6 +5,12 @@
     neovim
     gh
     tmux
+    zoxide
+    fastfetch
+    lazygit
+    desktoppr
+    ffmpeg
   ];
-  casks = [ "ghostty" "secretive" "bitwarden" "zen" "Roblox" "rectangle" "stats" ];
+  formulae = [ "zsh-autocomplete" ];
+  casks = [ "ghostty" "secretive" "bitwarden" "zen" "Roblox" "rectangle" "stats" "telegram" "vlc" ];
 }
