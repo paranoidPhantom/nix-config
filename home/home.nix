@@ -39,6 +39,7 @@
     };
     shellAliases = {
       cd = "z";
+      lz = "lazygit";
       c = "clear";
       ls = "ls -lAFGt | less";
       ga = "git add $1";
