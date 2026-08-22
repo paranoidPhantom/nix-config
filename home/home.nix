@@ -109,6 +109,21 @@
   };
 
   # omz
+  programs.zsh.oh-my-zsh = {
+    enable = true;
+    plugins = [
+      "git"
+      "bun"
+      "rust"
+      "docker"
+      "macos"
+      "nvm"
+      "npm"
+      "docker-compose"
+    ];
+    custom = ".config/zsh/oh-my-zsh-custom";
+    theme = "robbyrussell";
+  };
 
   # zsh-autocomplete
   xdg.configFile."zsh/oh-my-zsh-custom" = {
