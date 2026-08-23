@@ -11,6 +11,9 @@
     desktoppr
     ffmpeg
     bun
+    rust-analyzer
+    cargo
+    rustc
   ];
   formulae = [ "zsh-autocomplete" ];
   casks = [ "ghostty" "secretive" "bitwarden" "zen" "Roblox" "rectangle" "stats" "telegram" "vlc" ];
