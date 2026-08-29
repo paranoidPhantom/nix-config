@@ -18,5 +18,5 @@
     vtsls
   ];
   formulae = [ "zsh-autocomplete" ];
-  casks = [ "ghostty" "secretive" "bitwarden" "zen" "Roblox" "rectangle" "stats" "telegram" "vlc" "transmission" ];
+  casks = [ "ghostty" "secretive" "bitwarden" "zen" "Roblox" "rectangle" "stats" "telegram" "vlc" "transmission" "happ" "cleanshot" ];
 }
