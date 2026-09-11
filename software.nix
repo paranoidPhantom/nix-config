@@ -17,6 +17,6 @@
     nodejs_26
     vtsls
   ];
-  formulae = [ "zsh-autocomplete" "opencode" ];
-  casks = [ "ghostty" "secretive" "bitwarden" "zen" "Roblox" "rectangle" "stats" "telegram" "vlc" "transmission" "happ" "cleanshot" "obsidian" "gimp" "kontur-talk" "zed" ];
+  formulae = [ "zsh-autocomplete" "opencode" "pnpm" ];
+  casks = [ "ghostty" "secretive" "bitwarden" "zen" "Roblox" "rectangle" "stats" "telegram" "vlc" "transmission" "happ" "cleanshot" "obsidian" "gimp" "kontur-talk" "zed" "obs" ];
 }
