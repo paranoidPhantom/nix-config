@@ -11,9 +11,7 @@
     desktoppr
     ffmpeg
     bun
-    rust-analyzer
-    cargo
-    rustc
+    rustup
     nodejs_26
     vtsls
   ];
