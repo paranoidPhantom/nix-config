@@ -15,6 +15,7 @@
     nodejs_26
     vtsls
     bacon
+    jellyfin
   ];
   formulae = [ "zsh-autocomplete" "pnpm" ];
   casks = [ "ghostty" "secretive" "bitwarden" "zen" "Roblox" "rectangle" "stats" "telegram" "vlc" "transmission" "happ" "cleanshot" "obsidian" "gimp" "kontur-talk" "zed" "obs" "handbrake" "zoom" "discord" "helium-browser" ];
