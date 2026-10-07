@@ -12,7 +12,7 @@
     ffmpeg
     bun
     rustup
-    nodejs_26
+    nodejs_24
     vtsls
     bacon
     jellyfin
