@@ -38,6 +38,22 @@
         "type": "github"
       }
     },
+    "dsh-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791550137,
+        "narHash": "sha256-tTwQclQFhPoCrapXgVKC0dsHd2DdRs2BffS7AHfHdR8=",
+        "owner": "foolgry",
+        "repo": "homebrew-tap",
+        "rev": "a113ebda423a2f851f75244e94038d184aca0759",
+        "type": "github"
+      },
+      "original": {
+        "owner": "foolgry",
+        "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -303,15 +319,33 @@
         "type": "github"
       }
     },
+    "riscv-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783616307,
+        "narHash": "sha256-o4CZHNUn2ooJeda9bwgI+1QZFdQ7xCbRT5MInktFQAQ=",
+        "owner": "riscv-software-src",
+        "repo": "homebrew-riscv",
+        "rev": "43d32b832376b455a165bf91e41a2be22fabfe4d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "riscv-software-src",
+        "repo": "homebrew-riscv",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "dsh-tap": "dsh-tap",
         "home-manager": "home-manager",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
         "mac-app-util": "mac-app-util",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_5",
+        "riscv-tap": "riscv-tap"
       }
     },
     "systems": {

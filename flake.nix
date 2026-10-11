@@ -31,9 +31,14 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+
+    riscv-tap = {
+      url = "github:riscv-software-src/homebrew-riscv";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, mac-app-util, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, mac-app-util, nix-homebrew, homebrew-core, homebrew-cask, riscv-tap, ... }@inputs:
   let
     hostname = "Andreis-MacBook-Pro";   # replace: `scutil --get LocalHostName`
     username = "hdla";        # replace: your macOS short username
@@ -56,6 +61,7 @@
             taps = {
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
+              "riscv-software-src/homebrew-riscv" = riscv-tap;
             };
             mutableTaps = false;
           };
