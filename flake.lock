@@ -38,22 +38,6 @@
         "type": "github"
       }
     },
-    "dsh-tap": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1791550137,
-        "narHash": "sha256-tTwQclQFhPoCrapXgVKC0dsHd2DdRs2BffS7AHfHdR8=",
-        "owner": "foolgry",
-        "repo": "homebrew-tap",
-        "rev": "a113ebda423a2f851f75244e94038d184aca0759",
-        "type": "github"
-      },
-      "original": {
-        "owner": "foolgry",
-        "repo": "homebrew-tap",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -337,7 +321,6 @@
     },
     "root": {
       "inputs": {
-        "dsh-tap": "dsh-tap",
         "home-manager": "home-manager",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
