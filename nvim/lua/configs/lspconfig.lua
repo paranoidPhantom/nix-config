@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "clangd", "vtsls", "vue_ls" }
+local servers = { "html", "cssls", "clangd", "vtsls", "vue_ls", "hls" }
 vim.lsp.enable(servers)
 
 local vue_language_server_path = vim.fn.expand '$MASON/packages' .. '/vue-language-server' .. '/node_modules/@vue/language-server'
