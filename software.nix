@@ -1,21 +1,32 @@
 { pkgs, ... }: {
   packages = with pkgs; [
+    /* Core */
     git
     ripgrep
-    neovim
-    gh
-    tmux
     zoxide
     fastfetch
+    tmux
+
+    /* TUI */
+    neovim
     lazygit
-    desktoppr
+    glow
+
+    /* Misc */
     ffmpeg
+    desktoppr
+    gh
+
+    /* Webdev */
     bun
-    rustup
     nodejs_24
     vtsls
+
+    /* Rust */
+    rustup
     bacon
-    glow
+
+    /* Haskell */
     ghc
     haskell-language-server
   ];
