@@ -6,6 +6,7 @@
     zoxide
     fastfetch
     tmux
+    moor
 
     /* TUI */
     neovim

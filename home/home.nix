@@ -36,6 +36,7 @@
     enable = true;
     sessionVariables = {
       EDITOR = "nvim";
+      PAGER = "moor";
     };
     shellAliases = {
       cd = "z";
