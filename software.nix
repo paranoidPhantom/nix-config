@@ -17,6 +17,8 @@
     ffmpeg
     desktoppr
     gh
+    todoist-cli
+    rtk
 
     /* Webdev */
     bun
