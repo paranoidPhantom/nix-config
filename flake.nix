@@ -36,9 +36,14 @@
       url = "github:riscv-software-src/homebrew-riscv";
       flake = false;
     };
+
+    boring-notch-tap = {
+      url = "github:TheBoredTeam/homebrew-boring-notch";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, mac-app-util, nix-homebrew, homebrew-core, homebrew-cask, riscv-tap, ... }@inputs:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, mac-app-util, nix-homebrew, homebrew-core, homebrew-cask, riscv-tap, boring-notch-tap, ... }@inputs:
   let
     hostname = "Andreis-MacBook-Pro";   # replace: `scutil --get LocalHostName`
     username = "hdla";        # replace: your macOS short username
@@ -62,8 +67,12 @@
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "riscv-software-src/homebrew-riscv" = riscv-tap;
+              "TheBoredTeam/homebrew-boring-notch" = boring-notch-tap;
             };
             mutableTaps = false;
+            trust = {
+              casks = [ "theboredteam/boring-notch/boring-notch" ];
+            };
           };
         }
 
