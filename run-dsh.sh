@@ -16,6 +16,7 @@
 set -euo pipefail
 
 SESSION="dsh-web"
+TUNNEL="ngrok http 43127 --url https://gecko-improved-regularly.ngrok-free.app"
 
 if ! tmux has-session -t "$SESSION" 2>/dev/null; then
   tmux new-session -d -s "$SESSION" -x 200 -y 50
@@ -24,29 +25,29 @@ fi
 tmux has-session -t "$SESSION"
 
 # Keep the pane alive even if the command inside it exits/crashes,
-# so a dead 'dsh web' doesn't take the whole session/server down with it.
+# so a dead tunnel doesn't take the whole session/server down with it.
 tmux set-option -t "$SESSION" remain-on-exit on
 
 tmux send-keys -t "$SESSION" C-c ""
 tmux send-keys -t "$SESSION" "exec zsh -i" Enter
 sleep 0.3
 
-pkill -TERM -f 'dsh web' 2>/dev/null || true
+pkill -TERM -f "$TUNNEL" 2>/dev/null || true
 for i in $(seq 1 20); do
-  pgrep -f 'dsh web' >/dev/null 2>&1 || break
+  pgrep -f "$TUNNEL" >/dev/null 2>&1 || break
   sleep 0.1
 done
-pkill -KILL -f 'dsh web' 2>/dev/null || true
+pkill -KILL -f "$TUNNEL" 2>/dev/null || true
 
-tmux send-keys -t "$SESSION" "dsh web --no-open" Enter
+tmux send-keys -t "$SESSION" "$TUNNEL" Enter
 
-echo "dsh web launched in tmux session '$SESSION'."
+echo "ngrok tunnel launched in tmux session '$SESSION'."
 sleep 1   # give it a beat to crash if it's going to
 
 if tmux has-session -t "$SESSION" 2>/dev/null; then
   echo "--- pane output ---"
   tmux capture-pane -p -t "$SESSION"
 else
-  echo "Session died — dsh web likely crashed on startup." >&2
+  echo "Session died — ngrok likely crashed on startup." >&2
   exit 1
 fi
