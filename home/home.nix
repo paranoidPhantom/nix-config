@@ -62,7 +62,9 @@
       bindkey '^x^e' edit-command-line
 
       # Fetch
-      [[ -n ''${TMUX:-} ]] || fastfetch --logo NixOS;
+      if [[ -z ''${TMUX:-} && "$TERM_PROGRAM" != "WarpTerminal" ]]; then
+        fastfetch --logo NixOS
+      fi
     '';
   };
 
