@@ -19,6 +19,7 @@
     gh
     todoist-cli
     rtk
+    podman
 
     /* Webdev */
     bun
