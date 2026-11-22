@@ -27,7 +27,7 @@
   programs.desktoppr = {
     enable = true;
     settings = {
-      picture = "https://media.512pixels.net/downloads/macos-wallpapers-6k/26-Tahoe-Beach-Night.png";
+      picture = "https://media.512pixels.net/downloads/macos-wallpapers-6k/11-Big-Sur-Night-6k.jpg";
     };
   };
 
