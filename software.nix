@@ -20,6 +20,7 @@
     todoist-cli
     rtk
     podman
+    whisper-cpp
 
     /* Webdev */
     bun
