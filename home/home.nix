@@ -49,6 +49,7 @@
       gp = "git push";
       gs = "git status";
       nx = "nix develop";
+      oc = "opencode";
     };
     autosuggestion = {
       enable = true;
