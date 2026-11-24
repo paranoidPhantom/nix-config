@@ -63,7 +63,7 @@
 
       # Fetch
       if [[ -z ''${TMUX:-} && "$TERM_PROGRAM" != "WarpTerminal" ]]; then
-        fastfetch --logo NixOS
+        fastfetch --logo-type kitty --logo-animation-frame 0 --logo $HOME/nix-config/home/startup.gif;
       fi
     '';
   };
