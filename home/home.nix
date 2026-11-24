@@ -103,10 +103,10 @@
             "#f9e2af"
           ];
           lightTheme = false;
-        };
 
-        authorColors = {
-          "*" = "#b4befe";
+          authorColors = {
+            "*" = "#b4befe";
+          };
         };
       };
     };
