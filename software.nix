@@ -1,6 +1,7 @@
 { pkgs, ... }: {
+  # Nix packages
   packages = with pkgs; [
-    /* Core */
+    # Core CLI
     git
     ripgrep
     zoxide
@@ -8,12 +9,13 @@
     tmux
     moor
 
-    /* TUI */
+    # TUI
     neovim
     lazygit
     glow
+    podman-tui
 
-    /* Misc */
+    # Utilities
     ffmpeg
     desktoppr
     gh
@@ -22,44 +24,71 @@
     podman
     whisper-cpp
 
-    /* Webdev */
+    # Web development
     bun
     vtsls
 
-    /* Rust */
+    # Rust
     rustup
     bacon
 
-    /* Haskell */
+    # Haskell
     ghc
     haskell-language-server
   ];
-  formulae = [ "zsh-autocomplete" "opencode" "pnpm" ];
+
+  # Homebrew formulae
+  formulae = [
+    # Shell
+    "zsh-autocomplete"
+
+    # Development
+    "opencode"
+    "pnpm"
+
+    # Maintenance
+    "mac-cleanup-go"
+  ];
+
+  # Homebrew casks
   casks = [
+    # Development
     "ghostty"
-    "secretive"
-    "bitwarden"
-    "zen"
-    "Roblox"
-    "rectangle"
-    "stats"
-    "telegram"
-    "vlc"
-    "transmission"
-    "happ"
-    "cleanshot"
-    "obsidian"
-    "gimp"
-    "kontur-talk"
     "zed"
     "obs"
-    "handbrake-app"
-    "zoom"
-    "discord"
+
+    # Browsers
+    "zen"
     "google-chrome"
     "yandex"
-    "libreoffice"
-    "TheBoredTeam/boring-notch/boring-notch"
+
+    # Security
+    "secretive"
+    "bitwarden"
+
+    # Communication
+    "telegram"
+    "discord"
+    "zoom"
+    "kontur-talk"
     "yandextelemost"
+
+    # Productivity
+    "obsidian"
+    "rectangle"
+    "stats"
+    "cleanshot"
+    "happ"
+    "TheBoredTeam/boring-notch/boring-notch"
+
+    # Media
+    "vlc"
+    "transmission"
+    "gimp"
+    "handbrake-app"
+    "libreoffice"
+
+    # Misc
+    "Roblox"
   ];
 }
