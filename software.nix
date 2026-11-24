@@ -34,7 +34,7 @@
     ghc
     haskell-language-server
   ];
-  formulae = [ "zsh-autocomplete" "pnpm" "node" ];
+  formulae = [ "zsh-autocomplete" "opencode" "pnpm" ];
   casks = [
     "ghostty"
     "secretive"
